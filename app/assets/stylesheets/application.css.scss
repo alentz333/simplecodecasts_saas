@@ -14,3 +14,9 @@
  *= require_self
  */
  
+body 
+{
+  background: {
+    image: asset-url("engineering.jpeg");
+  }
+}
