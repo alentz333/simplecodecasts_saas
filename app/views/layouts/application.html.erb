@@ -34,6 +34,7 @@
       </div>
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
+          <li><%= link_to "Library", library_path %></li>
           <li><%= link_to "Community", users_path %></li>
           <li><%= link_to "My Account", edit_user_registration_path %></li>
         <% end %>
@@ -48,8 +49,10 @@
   <% flash.each do |key, value| %>
     <%= content_tag :div, value, class: "alert alert-#{key}" %>
   <% end %>
-  <%= yield %> 
 </div>
+<%= yield %>
+
+
 
 
 </body>
